@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet" />
+  <script defer src="./index.js"></script>
+  <title>Frontend Mentor | Contact form</title>
+</head>
+
+<body>
+  <main>
+
+    <!-- Success Message -->
+    <div class="success-container hidden">
+      <div class="success-header">
+        <img src="./assets/images/icon-success-check.svg" alt="success checkmark">
+        <p>Message Sent!</p>
+      </div>
+      <div class="success-message">Thanks for completing the form. We'll be in touch soon!</div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="grid">
+      <div class="form-container">
+        <h1>Contact Us</h1>
+        <form action="#" id="form" method="post">
+          <div class="name-container">
+            <div class="first-name">
+              <p><label for="firstname">First Name</label> <span class="required-field">*</span>
+              </p>
+              <input type="text" id="firstname" name="firstname" autocomplete="first name" required>
+              <p class="error hidden" data-firstname>This field is required</p>
+            </div>
+            <div class="last-name">
+              <p><label for="lastname">Last Name</label> <span class="required-field">*</span></p>
+              <input type="text" id="lastname" name="lastname" autocomplete="last name" required>
+              <p class="error hidden" data-lastname>This field is required</p>
+            </div>
+          </div>
+          <div class="email-container">
+            <p><label for="email">Email Address</label> <span class="required-field">*</span></p>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <p class="error hidden" data-email>Please enter a valid email address</p>
+          </div>
+          <label for="querytype">Query Type</label> <span class="required-field">*</span>
+          <div class="query-container">
+            <div>
+              <label for="gen-inquiry">
+                <div class="query" id="gen-inq-div">
+                  <input type="radio" id="gen-inquiry" name="querytype" data-input="gen-inquiry" required>
+                  <p>General Inquiry</p>
+                </div>
+              </label>
+            </div>
+            <div>
+              <label for="support-req">
+                <div class="query" id="support-req-div">
+                  <input type="radio" id="support-req" name="querytype" data-input="support-req" required>
+                  Support Request
+                </div>
+              </label>
+            </div>
+          </div>
+          <p class="error hidden" data-query>Please select a query type</p>
+          <div class="textarea-container">
+            <p><label for="message">Message</label> <span class="required-field">*</span></p>
+            <textarea name="message" id="message" required></textarea>
+            <p class="error hidden" data-message>This field is required</p>
+          </div>
+          <div class="consent-container">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">
+              <span class="consent-message cursor-pointer">
+                I consent to being contacted by the team <span class="required-field">*</span>
+            </label>
+            </span>
+          </div>
+          <p class="error hidden" data-consent>To submit this form, please consent to being contacted</p>
+          <input type="submit" name="submit" id="submit-btn" value="Submit">
+        </form>
+
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
